@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class CollisionHandler : MonoBehaviour
 {
     [SerializeField] float LoadDelay = 1.0f;
+    [SerializeField] ParticleSystem carashVFX;
     /* void OnCollisionEnter(Collision other)
      {
          Debug.Log(this.name + " ---Colide with other--- " + other.gameObject.name);
@@ -20,7 +21,10 @@ public class CollisionHandler : MonoBehaviour
 
     private void StartCrashSequence()
     {
+       carashVFX.Play();
        GetComponent<PlayerController>().enabled = false;
+       GetComponent<BoxCollider>().enabled = false;
+       GetComponent<MeshRenderer>().enabled = false;
        Invoke("ReloadLevel1", LoadDelay);
     }
 
