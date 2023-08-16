@@ -10,7 +10,7 @@ public class Enemy : MonoBehaviour
     {
        // Debug.Log("Hit by: "+ other.gameObject.name);
        GameObject vfx = Instantiate(deathVFX,transform.position, Quaternion.identity);
-       vfx.transform.parent = parent;
+       vfx.transform.parent = parent; 
        Destroy(gameObject);
     }
 }
