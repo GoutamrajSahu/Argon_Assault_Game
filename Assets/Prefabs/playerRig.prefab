@@ -67,6 +67,7 @@ GameObject:
   - component: {fileID: 2095550836051573520}
   - component: {fileID: 2095550836051573527}
   - component: {fileID: 2095550836051573526}
+  - component: {fileID: 718578488}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -82,7 +83,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2095550836051573525}
   m_LocalRotation: {x: 0.116297185, y: -0, z: -0, w: 0.9932145}
-  m_LocalPosition: {x: 0, y: 4.16, z: -16.86}
+  m_LocalPosition: {x: 0, y: 5.18, z: -16.62}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -140,6 +141,66 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2095550836051573525}
   m_Enabled: 1
+--- !u!114 &718578488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2095550836051573525}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 948f4100a11a5c24981795d21301da5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volumeTrigger: {fileID: 2095550836051573520}
+  volumeLayer:
+    serializedVersion: 2
+    m_Bits: 256
+  stopNaNPropagation: 1
+  finalBlitToCameraTarget: 0
+  antialiasingMode: 1
+  temporalAntialiasing:
+    jitterSpread: 0.75
+    sharpness: 0.25
+    stationaryBlending: 0.95
+    motionBlending: 0.85
+  subpixelMorphologicalAntialiasing:
+    quality: 2
+  fastApproximateAntialiasing:
+    fastMode: 0
+    keepAlpha: 0
+  fog:
+    enabled: 1
+    excludeSkybox: 1
+  debugLayer:
+    lightMeter:
+      width: 512
+      height: 256
+      showCurves: 1
+    histogram:
+      width: 512
+      height: 256
+      channel: 3
+    waveform:
+      exposure: 0.12
+      height: 256
+    vectorscope:
+      size: 256
+      exposure: 0.12
+    overlaySettings:
+      linearDepth: 0
+      motionColorIntensity: 4
+      motionGridSize: 64
+      colorBlindnessType: 0
+      colorBlindnessStrength: 1
+  m_Resources: {fileID: 11400000, guid: d82512f9c8e5d4a4d938b575d47f88d4, type: 2}
+  m_ShowToolkit: 0
+  m_ShowCustomSorter: 0
+  breakBeforeColorGrading: 0
+  m_BeforeTransparentBundles: []
+  m_BeforeStackBundles: []
+  m_AfterStackBundles: []
 --- !u!1001 &2529181817543955693
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -232,7 +293,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3282688816269846261, guid: d29f4d41cb19f0a48b988bb88bd46786, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 1.14
       objectReference: {fileID: 0}
     - target: {fileID: 3282688816269846261, guid: d29f4d41cb19f0a48b988bb88bd46786, type: 3}
       propertyPath: m_LocalPosition.z
@@ -266,10 +327,32 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3312621182738364228, guid: d29f4d41cb19f0a48b988bb88bd46786, type: 3}
+      propertyPath: Lasers.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3312621182738364228, guid: d29f4d41cb19f0a48b988bb88bd46786, type: 3}
+      propertyPath: Lasers.Array.data[0]
+      value: 
+      objectReference: {fileID: 2095550834464735827}
+    - target: {fileID: 3312621182738364228, guid: d29f4d41cb19f0a48b988bb88bd46786, type: 3}
+      propertyPath: Lasers.Array.data[1]
+      value: 
+      objectReference: {fileID: 7453696318540712738}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d29f4d41cb19f0a48b988bb88bd46786, type: 3}
+--- !u!1 &2095550834464735827 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3278793506286806591, guid: d29f4d41cb19f0a48b988bb88bd46786, type: 3}
+  m_PrefabInstance: {fileID: 3500556074134430828}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2097003032867177113 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3282688816269846261, guid: d29f4d41cb19f0a48b988bb88bd46786, type: 3}
+  m_PrefabInstance: {fileID: 3500556074134430828}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7453696318540712738 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6333363432865132366, guid: d29f4d41cb19f0a48b988bb88bd46786, type: 3}
   m_PrefabInstance: {fileID: 3500556074134430828}
   m_PrefabAsset: {fileID: 0}
